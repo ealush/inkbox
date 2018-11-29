@@ -1,13 +1,13 @@
 {
-  "main.css": "/inkbox/static/css/main.61ec969b.chunk.css",
-  "main.js": "/inkbox/static/js/main.23a644dc.chunk.js",
-  "main.js.map": "/inkbox/static/js/main.23a644dc.chunk.js.map",
+  "main.css": "/inkbox/static/css/main.0517e304.chunk.css",
+  "main.js": "/inkbox/static/js/main.9cac6657.chunk.js",
+  "main.js.map": "/inkbox/static/js/main.9cac6657.chunk.js.map",
   "static/js/1.1ce17669.chunk.js": "/inkbox/static/js/1.1ce17669.chunk.js",
   "static/js/1.1ce17669.chunk.js.map": "/inkbox/static/js/1.1ce17669.chunk.js.map",
   "runtime~main.js": "/inkbox/static/js/runtime~main.c4968b08.js",
   "runtime~main.js.map": "/inkbox/static/js/runtime~main.c4968b08.js.map",
-  "static/css/main.61ec969b.chunk.css.map": "/inkbox/static/css/main.61ec969b.chunk.css.map",
+  "static/css/main.0517e304.chunk.css.map": "/inkbox/static/css/main.0517e304.chunk.css.map",
   "index.html": "/inkbox/index.html",
-  "precache-manifest.df161be724e7c395bc73b617ea3dbfcc.js": "/inkbox/precache-manifest.df161be724e7c395bc73b617ea3dbfcc.js",
+  "precache-manifest.e6f415248a7272237bdd95821493606f.js": "/inkbox/precache-manifest.e6f415248a7272237bdd95821493606f.js",
   "service-worker.js": "/inkbox/service-worker.js"
 }
