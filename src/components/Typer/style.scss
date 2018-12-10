@@ -33,7 +33,7 @@ main {
             &.hidden {
                 filter: blur(0);
                 opacity: 1;
-                animation: hide .5s ease .5s forwards;
+                animation: hide .5s ease 0s forwards;
             }
         }
     }
