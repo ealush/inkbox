@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { uniqueId } from 'lodash';
+import { uniqueId, padEnd } from 'lodash';
 import './style.scss';
 
-const explanation = 'You can always go forward.     Never back.                    Everything is temporary.       Nothing lasts forever.'
-const prompt = 'Start typing:                  ';
-
-const convert = (oldMin, oldMax, newMin, newMax, oldValue) => (
-    (((oldValue - oldMin) * (newMax - newMin)) / (oldMax - oldMin)) + newMin
-);
-
 const MAX_CHAR_COUNT = 155;
+const MAX_STATE_SIZE = MAX_CHAR_COUNT * 2;
 const LINE_COUNT = 5;
 const MAX_PER_LINE = 31;
 const CHAR_HEIGHT = 40;
 const CHAR_WIDTH = 17;
-const FADE_OUT_AFTER = 31;
+
+const explanation = [
+    padEnd('You can always go forward.', MAX_PER_LINE),
+    padEnd('Never back.', MAX_PER_LINE),
+    padEnd('Everything is temporary.', MAX_PER_LINE),
+    padEnd('Nothing lasts forever.', MAX_PER_LINE)
+].join('');
+
+const prompt = padEnd('Start typing:', MAX_PER_LINE);
 
 function Typer() {
     const [stream, setStream] = useState({ chars: [] });
@@ -27,9 +29,10 @@ function Typer() {
 
         let next = stream;
 
-        if (stream.length % MAX_CHAR_COUNT === 0) {
-            next.chars = stream.chars.slice(0, stream.length - MAX_CHAR_COUNT);
+        if (next.chars.length === MAX_STATE_SIZE) {
+            next.chars = next.chars.slice(MAX_CHAR_COUNT, MAX_STATE_SIZE);
         }
+
         next.chars = [...next.chars, { key, id: uniqueId() }];
         setStream(next)
     }
@@ -40,12 +43,12 @@ function Typer() {
                 useType({ key });
 
                 if (i === phrase.length - 1) { cb(); }
-            }, i * 50);
+            }, i *  50);
         });
     }
 
     const showPrompt = () => {
-        setFadeAfter(FADE_OUT_AFTER);
+        setFadeAfter(MAX_PER_LINE);
 
         say(prompt, () => {
             document.body.addEventListener('keyup', useType);
@@ -82,7 +85,7 @@ function Typer() {
                         return null;
                     }
 
-                    const lineNumber = Math.floor(convert(0, MAX_CHAR_COUNT, 0, LINE_COUNT, i));
+                    const lineNumber = Math.floor((i / MAX_PER_LINE) % LINE_COUNT);
 
                     let style = {
                         transform: `translateX(${(i % MAX_PER_LINE) * CHAR_WIDTH}px) translateY(${lineNumber * CHAR_HEIGHT}px)`
