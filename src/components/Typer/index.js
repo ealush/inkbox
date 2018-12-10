@@ -68,7 +68,9 @@ function Typer() {
     }
 
     useEffect(() => {
-        say(explanation, clearAll);
+        setTimeout(() => {
+            say(explanation, clearAll);
+        }, 1500);
     }, []);
 
     return (
