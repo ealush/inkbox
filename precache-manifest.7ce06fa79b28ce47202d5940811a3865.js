@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/inkbox/static/js/runtime~main.c4968b08.js"
   },
   {
-    "revision": "8b3bf6b487a5bc3d4d48",
-    "url": "/inkbox/static/js/main.8b3bf6b4.chunk.js"
+    "revision": "a8318661302defecae7d",
+    "url": "/inkbox/static/js/main.a8318661.chunk.js"
   },
   {
     "revision": "cd41a6a6bf4c5510c56e",
     "url": "/inkbox/static/js/1.cd41a6a6.chunk.js"
   },
   {
-    "revision": "8b3bf6b487a5bc3d4d48",
+    "revision": "a8318661302defecae7d",
     "url": "/inkbox/static/css/main.b2ef242a.chunk.css"
   },
   {
-    "revision": "537412292bff5037a5e0d05f877a9813",
+    "revision": "c5af18e63d385744dcdb3674e018863d",
     "url": "/inkbox/index.html"
   }
 ];
