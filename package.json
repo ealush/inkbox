@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "node-sass": "^4.10.0",
     "react": "next",
     "react-dom": "next"
